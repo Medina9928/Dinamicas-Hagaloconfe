@@ -22,26 +22,48 @@
         <section>
             <h2>Seleccione la Cantidad</h2>
             <form id="raffleForm">
-                <div class="ticket">
-                <label>
-                    <input type="radio" name="quantity" value="20" checked> 20 números - $10,000
-                </label>
-            </div>
-            <div class="ticket">
-                <label>
-                    <input type="radio" name="quantity" value="40"> 40 números - $20,000
-                </label>
-            </div>
-            <div class="ticket">
-                <label>
-                    <input type="radio" name="quantity" value="60"> 60 números - $30,000
-                </label>
-            </div>
-            <div class="ticket">
-                <label>
-                    <input type="radio" name="quantity" value="120"> 120 números - $60,000
-                </label>
-            </div>
+                <div class="ticket-container">
+                    <div class="ticket">
+                        <input type="radio" id="quantity20" name="quantity" value="20" checked>
+                        <label for="quantity20">
+                            <div class="ticket-text">
+                                <span>20 números</span>
+                                <span>X</span>
+                                <span>$10,000</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="ticket">
+                        <input type="radio" id="quantity40" name="quantity" value="40">
+                        <label for="quantity40">
+                            <div class="ticket-text">
+                                <span>40 números</span>
+                                <span>X</span>
+                                <span>$20,000</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="ticket">
+                        <input type="radio" id="quantity60" name="quantity" value="60">
+                        <label for="quantity60">
+                            <div class="ticket-text">
+                                <span>60 números</span>
+                                <span>X</span>
+                                <span>$30,000</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="ticket">
+                        <input type="radio" id="quantity120" name="quantity" value="120">
+                        <label for="quantity120">
+                            <div class="ticket-text">
+                                <span>120 números</span>
+                                <span>X</span>
+                                <span>$60,000</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
                 <button type="button" id="payButton">Pagar Ahora</button>
             </form>
         </section>
