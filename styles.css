@@ -19,6 +19,7 @@ header img {
     max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
     height: auto; /* Mantiene la proporción */
 }
+
 h1 {
     margin: 0;
 }
@@ -28,34 +29,81 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Aumentar el margen inferior para más separación */
     background: white;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgb(255, 255, 255);
 }
+
+.ticket-container {
+    display: flex; /* Usar flexbox para organizar los tickets */
+    flex-wrap: wrap; /* Permitir que los tickets se envuelvan en varias filas */
+    justify-content: space-between; /* Espacio entre los tickets */
+}
+
 .ticket {
-    background: #32226d80; /* Color de fondo del ticket */
-    border: 2px solid #e9e9e9; /* Borde azul */
+    background: #1a1a1a; /* Fondo oscuro */
+    border: 2px solid #fff; /* Borde blanco */
     border-radius: 10px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    margin: 10px 0; /* Espaciado entre tickets */
-    box-shadow: 0 2px 5px rgba(90, 88, 88, 0.432); /* Sombra para dar profundidad */
-    transition: transform 0.2s; /* Transición suave para el efecto hover */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Espaciado entre tickets */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    transition: transform 0.2s, background 0.2s; /* Transiciones suaves */
+    color: #fff; /* Texto blanco */
+    font-family: 'Arial', sans-serif; /* Tipografía */
+    font-size: 1.5em; /* Tamaño de fuente aumentado */
+    text-align: center; /* Centra el texto */
+    width: calc(50% - 20px); /* Ancho del ticket para dos columnas */
+    height: 150px; /* Alto fijo para hacer el botón cuadrado */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
 .ticket:hover {
     transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    background: #333; /* Cambia el fondo al pasar el mouse */
 }
 
 .ticket input[type="radio"] {
-    margin-right: 10px; /* Espacio entre el radio button y el texto */
+    display: none; /* Oculta el radio button */
 }
+
+.ticket label {
+    display: block; /* Hace que el label ocupe todo el ancho */
+    padding: 10px; /* Espaciado interno para el label */
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: border-color 0.2s, background 0.2s; /* Transición suave para el borde */
+    width: 100%; /* Asegura que el label ocupe todo el ancho del ticket */
+    height: 100%; /* Asegura que el label ocupe todo el alto del ticket */
+    display: flex; /* Usar flexbox para centrar el texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.ticket-text {
+    display: flex; /* Usar flexbox para organizar el texto */
+    flex-direction: column; /* Colocar el texto en columnas */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.ticket label:hover {
+    border-color: #fff; /* Cambia el borde a blanco al pasar el mouse */
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente al pasar el mouse */
+}
+
+.ticket input[type="radio"]:checked + label {
+    border-color: #fff; /* Borde blanco cuando está seleccionado */
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente cuando está seleccionado */
+}
+
 .pay-button {
     display: inline-block;
     background: #046bd2;
     color: white;
-    padding: 20px 50px;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -100,5 +148,10 @@ footer {
     .pay-button {
         width: 100%; /* Botón ocupa el 100% del ancho en móviles */
         padding: 15px; /* Aumenta el padding para mejor usabilidad */
+    }
+
+    .ticket {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño en móviles */
+        height: auto; /* Permitir que la altura sea automática */
     }
 }
