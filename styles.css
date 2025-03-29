@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1111112d;
+}
+
+header {
+    background: #041575e5;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 650px;  /* Ancho del logo */
+    height: 150px; /* Alto del logo */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+.ticket {
+    background: #32226d80; /* Color de fondo del ticket */
+    border: 2px solid #e9e9e9; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado entre tickets */
+    box-shadow: 0 2px 5px rgba(90, 88, 88, 0.432); /* Sombra para dar profundidad */
+    transition: transform 0.2s; /* Transición suave para el efecto hover */
+}
+
+.ticket:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.ticket input[type="radio"] {
+    margin-right: 10px; /* Espacio entre el radio button y el texto */
+}
+.pay-button {
+    display: inline-block;
+    background: #046bd2;
+    color: white;
+    padding: 20px 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pay-button:hover {
+    background: #045cb4;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+.whatsapp-link {
+    color: #25D366; /* Color de WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    header img {
+        width: 100%; /* El logo ocupará el 100% del ancho del contenedor */
+        height: auto; /* Mantiene la proporción */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    section {
+        padding: 10px; /* Menos padding en pantallas pequeñas */
+    }
+
+    .pay-button {
+        width: 100%; /* Botón ocupa el 100% del ancho en móviles */
+        padding: 15px; /* Aumenta el padding para mejor usabilidad */
+    }
+}

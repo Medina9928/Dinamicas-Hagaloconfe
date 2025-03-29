@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag para responsividad -->
+    <title>Rifa de Oportunidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rifa de Oportunidad</h1>
+        <img src="logo.png" alt="Logo de la Rifa" />
+    </header>
+
+    <main>
+        <section>
+            <h2>N MAX CONNECTED 0 KM 2026</h2>
+            <p>VALOR DE CADA NÚMERO: $500 pesos</p>
+            <p>Este evento se realizará por la lotería de Boyacá cuando se venda la totalidad de los números.</p>
+        </section>
+
+        <section>
+            <h2>Seleccione la Cantidad</h2>
+            <form id="raffleForm">
+                <div class="ticket">
+                <label>
+                    <input type="radio" name="quantity" value="20" checked> 20 números - $10,000
+                </label>
+            </div>
+            <div class="ticket">
+                <label>
+                    <input type="radio" name="quantity" value="40"> 40 números - $20,000
+                </label>
+            </div>
+            <div class="ticket">
+                <label>
+                    <input type="radio" name="quantity" value="60"> 60 números - $30,000
+                </label>
+            </div>
+            <div class="ticket">
+                <label>
+                    <input type="radio" name="quantity" value="120"> 120 números - $60,000
+                </label>
+            </div>
+                <button type="button" id="payButton">Pagar Ahora</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Consulte sus Números Aquí</h2>
+            <form id="checkNumbersForm">
+                <input type="text" name="contact" placeholder="Digite su email o teléfono" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Para realizar el pago, por favor contáctanos a través de WhatsApp:</p>
+        <a href="https://api.whatsapp.com/send/?phone=573024990764&text&type=phone_number&app_absent=0" class="whatsapp-link">Enviar Mensaje por WhatsApp</a>
+        <p>Pagina web desarrollada por <a href="https://api.whatsapp.com/send?phone=573102181570">Diego G</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
