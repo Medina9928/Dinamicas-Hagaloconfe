@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +13,26 @@ header {
     color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
+}
+
+.header-info {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo de la sección */
+    background: rgb(255, 255, 255); /* Fondo blanco para la sección */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgb(119, 117, 117); /* Sombra para dar profundidad */
+}
+
+.header-info h2 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 5em; /* Tamaño de fuente para el encabezado */
+    color: #1302fd; /* Cambia el color del texto */
+}
+
+.header-info p {
+    margin: 5px 0; /* Espaciado vertical entre párrafos */
+    font-size: 1.5em; /* Tamaño de fuente para los párrafos */
 }
 
 header img {
@@ -28,89 +51,71 @@ main {
     padding: 20px;
 }
 
+.select-quantity {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    font-size: 1.8em; /* Tamaño de fuente para el encabezado */
+    color: #000000; /* Color del texto */
+}
+
 section {
     margin-bottom: 20px; /* Aumentar el margen inferior para más separación */
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgb(255, 255, 255);
 }
 
-.ticket-container {
-    display: flex; /* Usar flexbox para organizar los tickets */
-    flex-wrap: wrap; /* Permitir que los tickets se envuelvan en varias filas */
-    justify-content: space-between; /* Espacio entre los tickets */
+/* Estilos para la tabla */
+.number-table {
+    margin: 20px auto; /* Centra la tabla horizontalmente */
+    width: 100%; /* Ajusta el ancho de la tabla */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
 }
 
-.ticket {
-    background: #1a1a1a; /* Fondo oscuro */
-    border: 2px solid #fff; /* Borde blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    margin: 10px; /* Espaciado entre tickets */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
-    transition: transform 0.2s, background 0.2s; /* Transiciones suaves */
-    color: #fff; /* Texto blanco */
-    font-family: 'Arial', sans-serif; /* Tipografía */
-    font-size: 1.5em; /* Tamaño de fuente aumentado */
-    text-align: center; /* Centra el texto */
-    width: calc(50% - 20px); /* Ancho del ticket para dos columnas */
-    height: 150px; /* Alto fijo para hacer el botón cuadrado */
-    display: flex; /* Usar flexbox para centrar el contenido */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+table {
+    border-collapse: collapse;
+    width: 100%; /* Ajusta el ancho de la tabla */
 }
 
-.ticket:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-    background: #333; /* Cambia el fondo al pasar el mouse */
+td {
+    padding: 15px; /* Ajusta el espaciado interno de las celdas */
+    border: 1px solid #ddd; /* Ajusta el borde de las celdas */
 }
 
-.ticket input[type="radio"] {
-    display: none; /* Oculta el radio button */
+.number-button {
+    padding: 20px; /* Ajusta el espaciado interno de los botones */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente de los botones */
+    cursor: pointer;
+    border: 2px solid #002fff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.ticket label {
-    display: block; /* Hace que el label ocupe todo el ancho */
-    padding: 10px; /* Espaciado interno para el label */
-    border: 2px solid transparent; /* Borde transparente por defecto */
-    border-radius: 10px; /* Bordes redondeados */
-    transition: border-color 0.2s, background 0.2s; /* Transición suave para el borde */
-    width: 100%; /* Asegura que el label ocupe todo el ancho del ticket */
-    height: 100%; /* Asegura que el label ocupe todo el alto del ticket */
-    display: flex; /* Usar flexbox para centrar el texto */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+.number-button.selected {
+    background-color: #0026ff;
+    color: white;
 }
 
-.ticket-text {
-    display: flex; /* Usar flexbox para organizar el texto */
-    flex-direction: column; /* Colocar el texto en columnas */
-    align-items: center; /* Centrar horizontalmente */
-}
-
-.ticket label:hover {
-    border-color: #fff; /* Cambia el borde a blanco al pasar el mouse */
-    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente al pasar el mouse */
-}
-
-.ticket input[type="radio"]:checked + label {
-    border-color: #fff; /* Borde blanco cuando está seleccionado */
-    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente cuando está seleccionado */
+.button-container {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
 }
 
 .pay-button {
-    display: inline-block;
-    background: #046bd2;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    display: inline-block; /* Permite aplicar padding y centrar */
+    background: #0206ff; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
+    padding: 15px 30px; /* Aumentar el padding para hacer el botón más grande */
+    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s; /* Transición suave para el color de fondo */
 }
 
 .pay-button:hover {
-    background: #045cb4;
+    background: #045cb4; /* Color de fondo al pasar el mouse */
 }
 
 footer {
@@ -141,17 +146,26 @@ footer {
         font-size: 1.5em; /* Tamaño de fuente más pequeño en móviles */
     }
 
+    .header-info h2 {
+        font-size: 2.5em; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    .header-info p {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño en móviles */
+    }
+
     section {
         padding: 10px; /* Menos padding en pantallas pequeñas */
+    }
+
+    .number-button {
+        flex: 1 0 20%; /* 5 botones por fila en pantallas pequeñas */
+        font-size: 1.2em; /* Tamaño de fuente más pequeño en móviles */
+        padding: 10px; /* Menos padding en botones */
     }
 
     .pay-button {
         width: 100%; /* Botón ocupa el 100% del ancho en móviles */
         padding: 15px; /* Aumenta el padding para mejor usabilidad */
-    }
-
-    .ticket {
-        font-size: 1.2em; /* Tamaño de fuente más pequeño en móviles */
-        height: auto; /* Permitir que la altura sea automática */
     }
 }
